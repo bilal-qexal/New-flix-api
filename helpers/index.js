@@ -12,4 +12,5 @@ module.exports = {
   FAQs: require("./faqs.helper"),
   Slide: require("./slide.helper"),
   Ads: require("./ads.helper"),
+  TopbarContent: require("./topbarContent.helper"),
 };

@@ -10,6 +10,7 @@ const bannerRoutes = require("./banner.routes");
 const faqsRoutes = require("./faqs.routes");
 const slideRoutes = require("./slide.routes");
 const adsRoutes = require("./ads.routes");
+const topbarContentRoutes = require("./topbarContent.routes");
 
 router.use("/auth", authRoutes);
 router.use("/tag", tagRoutes);
@@ -20,6 +21,7 @@ router.use("/banner", bannerRoutes);
 router.use("/faqs", faqsRoutes);
 router.use("/slide", slideRoutes);
 router.use("/ads", adsRoutes);
+router.use("/topbarContent", topbarContentRoutes);
 
 router.use("/profile", express.static("/uploads/images"));
 

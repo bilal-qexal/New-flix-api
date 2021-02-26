@@ -13,6 +13,7 @@ const bannerRoutes = require("./banner1.routes");
 const faqsRoutes = require("./faqs.routes");
 const slidesRoutes = require("./slide.routes");
 const adsRoutes = require("./ads.routes");
+const topbarContentRoutes = require("./topbarContent.routes");
 
 router.use("/auth", authRoutes);
 router.use("/tag", tagRoutes);
@@ -24,6 +25,7 @@ router.use("/banner", bannerRoutes);
 router.use("/faqs", faqsRoutes);
 router.use("/slide", slidesRoutes);
 router.use("/ads", adsRoutes);
+router.use("/topbarContent", topbarContentRoutes);
 
 router.use("/auth", authRoutes);
 router.use("/user", userRoutes);

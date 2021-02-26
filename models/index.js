@@ -12,4 +12,5 @@ module.exports = {
   FAQs: require("./faqs.model"),
   Slide: require("./slide.model"),
   Ads: require("./ads.model"),
+  TopbarContent: require("./topbarContent.model"),
 };
