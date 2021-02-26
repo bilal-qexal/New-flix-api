@@ -13,4 +13,5 @@ module.exports = {
   Slide: require("./slide.model"),
   Ads: require("./ads.model"),
   TopbarContent: require("./topbarContent.model"),
+  ContactForm: require("./contactForm.model"),
 };

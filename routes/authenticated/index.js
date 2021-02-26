@@ -14,6 +14,7 @@ const faqsRoutes = require("./faqs.routes");
 const slidesRoutes = require("./slide.routes");
 const adsRoutes = require("./ads.routes");
 const topbarContentRoutes = require("./topbarContent.routes");
+const contactFormRoutes = require("./contactForm.routes");
 
 router.use("/auth", authRoutes);
 router.use("/tag", tagRoutes);
@@ -26,6 +27,7 @@ router.use("/faqs", faqsRoutes);
 router.use("/slide", slidesRoutes);
 router.use("/ads", adsRoutes);
 router.use("/topbarContent", topbarContentRoutes);
+router.use("/contactForm", contactFormRoutes);
 
 router.use("/auth", authRoutes);
 router.use("/user", userRoutes);

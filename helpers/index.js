@@ -13,4 +13,5 @@ module.exports = {
   Slide: require("./slide.helper"),
   Ads: require("./ads.helper"),
   TopbarContent: require("./topbarContent.helper"),
+  ContactForm: require("./contactForm.helper"),
 };

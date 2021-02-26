@@ -11,4 +11,5 @@ module.exports = {
   Slide: require("./slides.controller"),
   Ads: require("./ads.controller"),
   TopbarContent: require("./topbarContent.controller"),
+  ContactForm: require("./contactForm.controller"),
 };
