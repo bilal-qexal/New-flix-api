@@ -1,0 +1,15 @@
+module.exports = {
+  Console: require("./console.helper"),
+  Response: require("./response.helper"),
+  Auth: require("./auth.helper"),
+  Category: require("./category.helper"),
+  Tag: require("./tag.helper"),
+  Actor: require("./actor.helper"),
+  About: require("./about.helper"),
+  TermCondition: require("./termCondition.helper"),
+  // Banner: require("./banner.helper"),
+  Banner: require("./banner1.helper"),
+  FAQs: require("./faqs.helper"),
+  Slide: require("./slide.helper"),
+  Ads: require("./ads.helper"),
+};

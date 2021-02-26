@@ -1,0 +1,333 @@
+{
+    "info": {
+        "_postman_id": "2b7fc811-e0a8-4423-948e-1dbbccf4d9b0",
+        "name": "Flix",
+        "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "Account",
+            "item": [
+                {
+                    "name": "Sign Up",
+                    "id": "2b63c22a-484a-4864-83a7-3d8dcbcb6f31",
+                    "request": {
+                        "method": "POST",
+                        "header": [],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"first_name\": \"User\",\n    \"last_name\": \"One\",\n    \"email\": \"user@flix.com\",\n    \"phone\":\"+923216160982\",\n    \"username\":\"user\",\n    \"password\": \"User@1234\"\n}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "url": "{{baseURL}}/auth/signup"
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Check Email",
+                    "id": "b134d54c-6055-4a2f-a5c7-f5133dc76b60",
+                    "request": {
+                        "method": "POST",
+                        "header": [],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"email\": \"user@flix.com\"\n}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "url": "{{baseURL}}/auth/check-email"
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Login",
+                    "id": "3b0056b8-db7b-49ec-9e47-4e36cf83e8c9",
+                    "request": {
+                        "method": "POST",
+                        "header": [],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"email\": \"user@flix.com\",\n    \"password\": \"User@1234\"\n}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "url": "{{baseURL}}/auth/login"
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Resend Email Verification",
+                    "id": "814ddc29-1ae9-4310-8a4b-0561077ac689",
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "{{token}}",
+                                "type": "text"
+                            }
+                        ],
+                        "url": "{{baseURL}}/auth/resend-verification-email"
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Change Password",
+                    "id": "c23f4793-dd24-4dc7-86dc-e1aee436a630",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "{{token}}",
+                                "type": "text"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n\t\"new\":\"Password@1234\",\n\t\"current\":\"Sonu@1234\"\n}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "url": "{{baseURL}}/auth/change-password"
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Update Profile",
+                    "id": "1ff1e05b-cc1e-4c36-8cad-9a6a689ec521",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "{{token}}",
+                                "type": "text"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"first_name\": \"User\",\n    \"last_name\":\"One\",\n    \"phone\": \"+923000000000\"\n}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "url": "{{baseURL}}/auth/update-profile"
+                    },
+                    "response": []
+                },
+                {
+                    "name": "My Profile",
+                    "id": "cae4deba-2ef2-4f44-b949-73787b49c414",
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "{{token}}",
+                                "type": "text"
+                            }
+                        ],
+                        "url": "{{baseURL}}/auth/my-profile"
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Resend Phone Verification SMS",
+                    "id": "1bf5ab7e-b699-4de5-ac49-71fa8d07bd19",
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "{{token}}",
+                                "type": "text"
+                            }
+                        ],
+                        "url": "{{baseURL}}/auth/resend-verification-phone"
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Verify Phone Code",
+                    "id": "9b90c6a0-15ed-4ecd-84e4-3e51cd3102a8",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "{{token}}",
+                                "type": "text"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n\t\"code\":\"888193\"\n}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "url": "{{baseURL}}/auth/verify-phone-code"
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Forget Password",
+                    "id": "aacbbc84-58e3-42dc-b8dd-096c32b27b93",
+                    "request": {
+                        "method": "POST",
+                        "header": [],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n\t\"email\":\"user@flix.com\"\n}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "url": "{{baseURL}}/auth/forget-password"
+                    },
+                    "response": []
+                }
+            ],
+            "id": "b16f5121-4de7-4c05-a280-7fd2fb5ebc6e",
+            "event": [
+                {
+                    "listen": "prerequest",
+                    "script": {
+                        "id": "3ab0b1f4-7046-4c10-aee9-7c33c980981c",
+                        "type": "text/javascript",
+                        "exec": [
+                            ""
+                        ]
+                    }
+                },
+                {
+                    "listen": "test",
+                    "script": {
+                        "id": "5bc80ce8-87c3-4ce2-b8ff-e2473ab46bf8",
+                        "type": "text/javascript",
+                        "exec": [
+                            ""
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Admin",
+            "item": [
+                {
+                    "name": "User",
+                    "item": [
+                        {
+                            "name": "Login",
+                            "id": "015ba62b-66dd-4006-81e8-0178b958c704",
+                            "request": {
+                                "method": "POST",
+                                "header": [],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\n    \"email\":\"admin@flix.com\",\n    \"password\":\"Admin@1234\"\n}",
+                                    "options": {
+                                        "raw": {
+                                            "language": "json"
+                                        }
+                                    }
+                                },
+                                "url": "{{baseURL}}/auth/login"
+                            },
+                            "response": []
+                        },
+                        {
+                            "name": "Block User",
+                            "id": "eac1b69f-859e-47a5-abb9-d5a6a78b14a8",
+                            "request": {
+                                "method": "POST",
+                                "header": [
+                                    {
+                                        "key": "Authorization",
+                                        "value": "{{token}}",
+                                        "type": "text"
+                                    }
+                                ],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\n\t\"block\":\"5f1228c559a155abafbbbd89\"\n}",
+                                    "options": {
+                                        "raw": {
+                                            "language": "json"
+                                        }
+                                    }
+                                },
+                                "url": "{{baseURL}}/auth/block-user"
+                            },
+                            "response": []
+                        },
+                        {
+                            "name": "unBlock User",
+                            "id": "bfd187cc-29cf-4545-b37a-566718772e23",
+                            "request": {
+                                "method": "POST",
+                                "header": [
+                                    {
+                                        "key": "Authorization",
+                                        "type": "text",
+                                        "value": "{{token}}"
+                                    }
+                                ],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\n\t\"block\":\"5eb533931e54854f7f1382c3\"\n}",
+                                    "options": {
+                                        "raw": {
+                                            "language": "json"
+                                        }
+                                    }
+                                },
+                                "url": "{{baseURL}}/auth/unblock-user"
+                            },
+                            "response": []
+                        },
+                        {
+                            "name": "All Users",
+                            "id": "8cc667b8-bf2e-43df-aa71-cbf6fae0d1bf",
+                            "request": {
+                                "method": "GET",
+                                "header": [
+                                    {
+                                        "key": "Authorization",
+                                        "value": "{{token}}",
+                                        "type": "text"
+                                    }
+                                ],
+                                "url": "{{baseURL}}/user/all"
+                            },
+                            "response": []
+                        }
+                    ],
+                    "id": "2c13b860-6816-4344-ae23-3745c9987b56"
+                }
+            ],
+            "id": "049e8dd3-d67e-4423-99ae-afc65a3fbf57"
+        }
+    ]
+}

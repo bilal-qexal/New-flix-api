@@ -1,0 +1,15 @@
+module.exports = {
+  User: require("./user.model"),
+  Actor: require("./actor.model"),
+  EmailVerification: require("./email_verification.model"),
+  PhoneVerification: require("./sms_verification.model"),
+  ForgetPassword: require("./forgetPassword.model"),
+  Category: require("./category.model"),
+  Tag: require("./tag.model"),
+  About: require("./aboutUs.model"),
+  TermCondition: require("./termCondition.model"),
+  Banner: require("./banner1.model"),
+  FAQs: require("./faqs.model"),
+  Slide: require("./slide.model"),
+  Ads: require("./ads.model"),
+};
