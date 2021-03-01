@@ -3,6 +3,10 @@ const Schema = mongoose.Schema;
 const timeStamp = require("mongoose-timestamp");
 
 const ContactFormSchema = new Schema({
+  status: {
+    type: String,
+    default: "pending",
+  },
   name: {
     type: String,
     required: true,

@@ -12,6 +12,7 @@ const slideRoutes = require("./slide.routes");
 const adsRoutes = require("./ads.routes");
 const topbarContentRoutes = require("./topbarContent.routes");
 const contactFormRoutes = require("./contactForm.routes");
+const blogRoutes = require("./blog.routes");
 
 router.use("/auth", authRoutes);
 router.use("/tag", tagRoutes);
@@ -24,6 +25,7 @@ router.use("/slide", slideRoutes);
 router.use("/ads", adsRoutes);
 router.use("/topbarContent", topbarContentRoutes);
 router.use("/contactForm", contactFormRoutes);
+router.use("/blog", blogRoutes);
 
 router.use("/profile", express.static("/uploads/images"));
 

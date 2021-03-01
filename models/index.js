@@ -14,4 +14,5 @@ module.exports = {
   Ads: require("./ads.model"),
   TopbarContent: require("./topbarContent.model"),
   ContactForm: require("./contactForm.model"),
+  Blog: require("./blog.model"),
 };

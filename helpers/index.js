@@ -14,4 +14,5 @@ module.exports = {
   Ads: require("./ads.helper"),
   TopbarContent: require("./topbarContent.helper"),
   ContactForm: require("./contactForm.helper"),
+  Blog: require("./blog.helper"),
 };
